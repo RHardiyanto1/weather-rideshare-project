@@ -11,30 +11,30 @@ But for now, let's take a broad overview of how many trips people booked for the
 Let's take a look on how many people decided to book rides.
 ### Daily Trends
 
-![[Daily Rideshare Demand.png]]
+![Daily Rideshare Demand](https://raw.githubusercontent.com/RHardiyanto1/weather-rideshare-project/main/images/Daily%20Rideshare%20Demand.png)
 
 Like how Garfield hates Mondays, it seems to also apply for rideshare counts, at least for this specific month, as the dips always bottoms out at a Monday. While Saturdays are the most popular time to book rides.
 
 ### Weekly Trends
 
-![[Avg. Weekly Demand.png]]
+![Weekly Demand](https://raw.githubusercontent.com/RHardiyanto1/weather-rideshare-project/main/images/Avg.%20Weekly%20Demand.png)
 
 This time looking at the average trips based on the day of the week, it affirms our last finding where Saturday is the most popular day, and Monday the least.
 ### Hourly Trends
 
-![[Avg. Hourly Demand.png]]
+![Hourly Demand](https://raw.githubusercontent.com/RHardiyanto1/weather-rideshare-project/main/images/Avg.%20Hourly%20Demand.png)
 
 Taking an even deeper look in hourly trends, we can see quite the difference in habits, based on on the day of the week. On weekdays, peaks often coincides with rush hour. Do some people Uber to work and home every day? That sounds expensive. On the weekends, we don't see the rush hour peaks. Instead, we see a much larger count of trips during the early morning hours. People staying out much longer after hours.
 
 ## Is weather a major factor when people decide to book a ride?
 
-![[Correlation Chart.png]]
+![Correlation Chart](https://raw.githubusercontent.com/RHardiyanto1/weather-rideshare-project/main/images/Correlation%20Chart.png)
 
 So, back to our original question: do rideshare trips change based on the weather? Looking at the correlation table, the short answer is... maybe? Weather conditions themselves seem to have little to no impact on rideshare trip counts. Wind speed shows a weak correlation, while temperature has a slightly stronger but still mild correlation. But that's not enough to give us a definitive answer, so we decided to dig deeper by modeling the data to see just how much weather really matters.
 
 We chose a Random Forest model for this analysis due to its ability to handle complex, non-linear relationships between multiple variables, such as weather conditions, time of day, and day of the week. The model achieved a high $R^2$ score of 0.97, indicating that it can explain 97% of the variation in rideshare counts for June 2024. This suggests the model is highly effective at capturing the patterns in the data. Additionally, when tested against historical data from June 2023, the model maintained a strong performance with an $R^2$ of 0.94, demonstrating its generalizability and robustness over different periods.
 
-![[Feature Importance.png]]
+![Feature Importance](https://github.com/user-attachments/assets/e18a9856-c912-4410-b8f5-1ea70e4547d2)
 
 Although temperature had the second strongest correlation with rideshare counts, the Random Forest model ranked it as having low importance relative to other features, such as the hour of pickup and day of the week. This suggests that, while there may be some correlation between temperature and rideshare demand, it is not a primary driver of the variation observed in our data.
 

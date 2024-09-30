@@ -26,7 +26,7 @@ To determine if weather conditions are a major factor influencing the number of 
 
 ## Full Analysis
 
-For the full analysis, it's located in `WeatherRideshare Project Report.md`
+For the full analysis, it's located at my [website](https://rhardiyanto1.github.io/posts/WeatherRideshare-Project-Report/).
 
 ## Repository Contents
 
